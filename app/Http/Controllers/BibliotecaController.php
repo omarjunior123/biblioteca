@@ -37,7 +37,7 @@ class BibliotecaController extends Controller
     { 
         $url = file_get_contents("https://www.googleapis.com/books/v1/volumes?q="."a");
         $lista = json_decode($url);
-        return view('SearchAvancado', ['lista' => $lista]);
+        return view('searchAvancado', ['lista' => $lista]);
     }
 
     public function searchAvancado(Request $request)
@@ -77,7 +77,7 @@ class BibliotecaController extends Controller
             $lista = json_decode($url);
         }
 
-        return view('SearchAvancado', ['lista' => $lista]);
+        return view('searchAvancado', ['lista' => $lista]);
     }
 
 }

@@ -38,6 +38,6 @@ class LivroController extends Controller
             $lista += [$x => $livro];
             $x++;
         }
-        return view('ViewMeusLivros', ['lista' => $lista]); 
+        return view('viewMeusLivros', ['lista' => $lista]); 
     }
 }
