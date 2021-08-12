@@ -39,7 +39,7 @@
                          </div>
                     </form>
                </div>
-                    
+               @if($lista->totalItems)     
                @foreach($lista->items as $livro)
                     <?php
                          if(isset($livro->volumeInfo->imageLinks))
@@ -76,6 +76,9 @@
                          </div>
                     </div>
                @endforeach
+               @else
+                    <p>Resultado não encontrado. Tente novamente</p>
+                @endif
           </div>
      </div>
 </section>
